@@ -1,0 +1,64 @@
+$background-color: #090909;
+$color-desc: #ccc;
+
+.about{
+    padding: 100px 0;
+    background-color: $background-color;
+    &__image{
+        width: 500px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        @include small-tablet{
+            grid-template-columns: repeat(1,1fr);
+            gap: 40px;
+        }
+        &-description{
+            font-size: 18px;
+            line-height: 22px;
+            color: $color-desc;
+            font-weight: 300;
+            @include small-tablet{
+                padding-inline: 100px;
+            }
+            @include small-mobile{
+                padding: 0;
+            }
+        }
+        &-left{
+            display: flex;
+            align-items: center;
+            text-align: right;
+            &Order{
+                @include small-tablet{
+                    order: 2;
+                }
+            }
+            @include small-tablet{
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        &-right{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &Order{
+                @include small-tablet{
+                    order: 1;
+                }
+            }
+            @include small-tablet{
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

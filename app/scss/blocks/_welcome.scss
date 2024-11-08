@@ -14,7 +14,7 @@ $header-padding: 80px;
             position: absolute;
             top: 50px;
             right: 0;
-            z-index: 6;
+            z-index: 2;
         }
         &-circle{
             &1{
@@ -56,6 +56,14 @@ $header-padding: 80px;
         height: 600px;
         background-color: #222;
         border-radius: 50%;
+        @include small-tablet{
+            scale: 0.7;
+        }
+        @include small-mobile{
+            width: 500px;
+            height: 500px;
+            scale: 0.8;
+        }
         &1{
             position: relative;
             filter: drop-shadow(20px 10px 2px black);
@@ -99,11 +107,13 @@ $header-padding: 80px;
         position: relative;
         color: #ccc;
         width: 300px;
-        left: 160px;
+        left: 150px;
         top: 150px;
+        font-weight: 300;
         &-text{
             position: relative;
             font-size: 24px;
+            text-align: center;
         }
     }
 }

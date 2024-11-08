@@ -2,6 +2,7 @@
 import localFont from "next/font/local";
 import "./scss/main.scss";
 import Header from "./components/header";
+import { montserrat } from "./components/font";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${montserrat.className} main`}>
         <Header/>
         {children}
       </body>
