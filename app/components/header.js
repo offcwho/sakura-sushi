@@ -2,24 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from 'react';
 
 //Icons
 import { ShoppingCart } from 'lucide-react';
 import { UserRound } from 'lucide-react';
 //Icons
 
-window.addEventListener("scroll", function(){
-    let 
-        value = window.scrollY,
-        header = document.getElementById('header');
-    if(value > 0){
-        header.classList.add('header--scrolled');
-    }else{
-        header.classList.remove('header--scrolled');
-    }
-}) 
-
 export default function Header(){
+    useEffect(() => {
+        window.addEventListener("scroll", function(){
+            let 
+                value = window.scrollY,
+                header = document.getElementById('header');
+            if(value > 0){
+                header.classList.add('header--scrolled');
+            }else{
+                header.classList.remove('header--scrolled');
+            }
+        }) 
+    })
     return(
         <header className="header" id="header">
             <div className="container header__container">
