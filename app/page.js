@@ -2,8 +2,10 @@
 
 import { useEffect } from 'react';
 import Image from "next/image";
+import SmoothScroll from "smoothscroll-for-websites";
 
 export default function Home() {
+  SmoothScroll({ stepSize: 20 })
   useEffect(() => {
     window.addEventListener('scroll', function(){
       const sushi1 = document.getElementById('sushi1'),
@@ -13,17 +15,19 @@ export default function Home() {
           circle1 = document.getElementById('circle1'),
           circle2 = document.getElementById('circle2'),
           text = document.getElementById('text'),
-          background = document.getElementById('bg');
+          background = document.getElementById('bg'),
+          description = document.getElementById('description');
       let value = window.scrollY;
     
       sushi1.style.bottom = value * 2 + 'px';
-      sushi2.style.bottom = value * 1.5 + 'px';
+      sushi2.style.bottom = value * 1.9 + 'px';
       tobiko.style.bottom = value * 1.20 + 'px';
-      circle.style.top = value * 1.5 + 'px';
-      circle1.style.bottom = value * 1.01 + 'px';
+      circle.style.top = value * 1.2 + 'px';
+      circle1.style.bottom = value * 1.10 + 'px';
       circle2.style.bottom = value * 1.15 + 'px';
-      text.style.top = value * 2 + 'px';
+      text.style.top = value * 1.3 + 'px';
       background.style.bottom = value * 1.35 + 'px';
+      description.style.top = value * 1.5 + 'px';
     })
   })
   return (
@@ -96,16 +100,21 @@ export default function Home() {
                   priority
                 />
               </div>
+              <div className="welcome__description" >
+                <p className="welcome__description-text" id='description'>
+                  Уютный и стильный суши бар, предлагающий свежие и вкусные роллы и японские кулинарные деликатесы. Тут вы найдете широкий выбор блюд, а также возможность заказать доставку на дом или в офис.
+                </p>
+              </div>
             </div>
             <Image
-                  className="welcome__background"
-                  id="bg"
-                  src="/bg.jpg"
-                  alt="Next.js logo"
-                  width={1920}
-                  height={1080}
-                  priority
-                />
+              className="welcome__background"
+              id="bg"
+              src="/bg.jpg"
+              alt="Next.js logo"
+              width={2000}
+              height={1080}
+              priority
+            />
         </div>
       </section>
   );

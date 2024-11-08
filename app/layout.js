@@ -1,3 +1,4 @@
+
 import localFont from "next/font/local";
 import "./scss/main.scss";
 import Header from "./components/header";
@@ -12,6 +13,8 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+
 
 export const metadata = {
   title: "Create Next App",

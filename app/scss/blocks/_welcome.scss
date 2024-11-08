@@ -3,6 +3,7 @@ $header-padding: 80px;
 .welcome{
     padding-top: $header-padding;
     height: 100vh;
+    user-select: none;
     &__container{
         display: flex;
         align-items: center;
@@ -24,7 +25,7 @@ $header-padding: 80px;
             &2{
                 position: absolute;
                 bottom: -100px;
-                right: 100px;
+                left: 100px;
                 z-index: 2;
             }
         }
@@ -38,7 +39,7 @@ $header-padding: 80px;
             &2{
                 position: absolute;
                 bottom: 0;
-                right: 0;
+                left: 0;
                 z-index: 5;
             }
         }
@@ -57,23 +58,28 @@ $header-padding: 80px;
         border-radius: 50%;
         &1{
             position: relative;
+            filter: drop-shadow(20px 10px 2px black);
         }
         &2{
             position: relative;
+            filter: drop-shadow(20px 10px 2px black);
         }
     }
     &__sushi{
         &1{
             position: relative;
+            filter: drop-shadow(20px 10px 10px black);
             
         }
         &2{
             position: relative;
+            filter: drop-shadow(20px 10px 10px black);
             
         }
     }
     &__tobiko{
         position: relative;
+        filter: drop-shadow(20px 10px 10px black);
     }
     &__text{
         position: relative;
@@ -88,5 +94,16 @@ $header-padding: 80px;
         filter: brightness(0.3);
         object-fit: cover;
         z-index: 0;
+    }
+    &__description{
+        position: relative;
+        color: #ccc;
+        width: 300px;
+        left: 160px;
+        top: 150px;
+        &-text{
+            position: relative;
+            font-size: 24px;
+        }
     }
 }
