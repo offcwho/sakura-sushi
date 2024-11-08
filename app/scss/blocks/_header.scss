@@ -1,5 +1,6 @@
 $color-bg-link: #000;
-$color-text: #fff;
+$color-text: #ca1717;
+$color: #fff;
 $transition: all .3s ease-in-out;
 $radius-default: 8px;
 
@@ -9,7 +10,7 @@ $radius-default: 8px;
     position: fixed;
     top: 0;
     transition: $transition;
-    color: $color-text;
+    color: $color;
     &--scrolled{
         backdrop-filter: blur(10px);
     }
@@ -37,8 +38,8 @@ $radius-default: 8px;
         border-radius: $radius-default;
         transition: $transition;
         &:hover{
-            background-color: $color-bg-link;
-            color: var(--color-link);
+            background-color: $color-text;
+            color: $color-bg-link;
         }
     }
     &__list{
@@ -55,8 +56,8 @@ $radius-default: 8px;
             height: 60px;
             transition: $transition;
             &:hover{
-                background: $color-bg-link;
-                color: $color-text;
+                background: $color-text;
+                color: $color-bg-link;
             }
         }
     }
