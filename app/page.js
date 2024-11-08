@@ -4,10 +4,10 @@ import Menu from "./components/menu";
 
 export default function Home() {
   return (
-      <>
+      <main>
         <Welcome/>
         <About/>
         <Menu/>
-      </>
+      </main>
   );
 }

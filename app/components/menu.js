@@ -129,7 +129,7 @@ export default function Menu(){
                     </li>
                 </ul>
                 <div className="menu__more">
-                    <Link href="/menu" className="menu__more-btn">Показать ещё...</Link>
+                    <Link href="#!" className="menu__more-btn">Показать ещё...</Link>
                 </div>
             </div>
         </section>

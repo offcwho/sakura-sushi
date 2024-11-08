@@ -1,4 +1,3 @@
-
 import "./scss/main.scss";
 import Header from "./components/header";
 import { montserrat } from "./components/font";

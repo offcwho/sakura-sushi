@@ -2,10 +2,8 @@
 
 import { useEffect } from 'react';
 import Image from "next/image";
-import SmoothScroll from "smoothscroll-for-websites";
 
 export default function Welcome() {
-  SmoothScroll({ stepSize: 20 })
   useEffect(() => {
     window.addEventListener('scroll', function(){
       const sushi1 = document.getElementById('sushi1'),
@@ -16,9 +14,9 @@ export default function Welcome() {
           circle2 = document.getElementById('circle2'),
           text = document.getElementById('text'),
           background = document.getElementById('bg'),
-          description = document.getElementById('description');
-      let value = window.scrollY;
-    
+          description = document.getElementById('description'),
+          value = window.scrollY;
+  
       sushi1.style.bottom = value * 2 + 'px';
       sushi2.style.bottom = value * 1.9 + 'px';
       tobiko.style.bottom = value * 1.20 + 'px';
