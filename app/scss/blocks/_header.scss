@@ -1,0 +1,63 @@
+$color-bg-link: #000;
+$color-text: #fff;
+$transition: all .3s ease-in-out;
+$radius-default: 8px;
+
+.header{
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    transition: $transition;
+    color: $color-text;
+    &--scrolled{
+        backdrop-filter: blur(10px);
+    }
+    &__container{
+        padding-block: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+        gap: 30px;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__item{
+        padding: 5px 10px;
+        border-radius: $radius-default;
+        transition: $transition;
+        &:hover{
+            background-color: $color-bg-link;
+            color: var(--color-link);
+        }
+    }
+    &__list{
+        display: flex;
+        gap: 20px;
+        &-item{
+            
+        }
+        &-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            transition: $transition;
+            &:hover{
+                background: $color-bg-link;
+                color: $color-text;
+            }
+        }
+    }
+}

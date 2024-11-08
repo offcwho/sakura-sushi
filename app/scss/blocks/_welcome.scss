@@ -1,0 +1,92 @@
+$header-padding: 80px;
+
+.welcome{
+    padding-top: $header-padding;
+    height: 100vh;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        overflow: hidden;
+        &-text{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            z-index: 6;
+        }
+        &-circle{
+            &1{
+                position: absolute;
+                right: -50px;
+                z-index: 1;
+            }
+            &2{
+                position: absolute;
+                bottom: -100px;
+                right: 100px;
+                z-index: 2;
+            }
+        }
+        &-sushi{
+            &1{
+                position: absolute;
+                bottom: 300px;
+                right: -50px;
+                z-index: 4;
+            }
+            &2{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 5;
+            }
+        }
+        &-tobiko{
+            position: absolute;
+            right: -60px;
+            z-index: 3;
+        }
+    }
+    &__circle{
+        z-index: 1;
+        position: relative;
+        width: 600px;
+        height: 600px;
+        background-color: #222;
+        border-radius: 50%;
+        &1{
+            position: relative;
+        }
+        &2{
+            position: relative;
+        }
+    }
+    &__sushi{
+        &1{
+            position: relative;
+            
+        }
+        &2{
+            position: relative;
+            
+        }
+    }
+    &__tobiko{
+        position: relative;
+    }
+    &__text{
+        position: relative;
+    }
+    &__background{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        filter: brightness(0.3);
+        object-fit: cover;
+        z-index: 0;
+    }
+}
