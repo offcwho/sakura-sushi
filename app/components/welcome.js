@@ -23,9 +23,9 @@ export default function Welcome() {
       circle.style.top = value * 1.2 + 'px';
       circle1.style.bottom = value * 1.10 + 'px';
       circle2.style.bottom = value * 1.15 + 'px';
-      text.style.top = value * 1.3 + 'px';
+      text.style.top = value * 1.2 + 'px';
       background.style.bottom = value * 1.35 + 'px';
-      description.style.top = value * 1.5 + 'px';
+      description.style.top = value * 1.2 + 'px';
     })
   })
   return (

@@ -25,7 +25,7 @@ export default function Header(){
     return(
         <header className="header" id="header">
             <div className="container header__container">
-                <Link href="#!" className="header__link-logo">
+                <Link href="/" className="header__link-logo">
                     <Image
                         className=""
                         src="/next.svg"
