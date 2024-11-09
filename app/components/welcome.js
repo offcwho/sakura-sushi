@@ -17,8 +17,8 @@ export default function Welcome() {
           description = document.getElementById('description'),
           value = window.scrollY;
   
-      sushi1.style.bottom = value * 2 + 'px';
-      sushi2.style.bottom = value * 1.9 + 'px';
+      sushi1.style.left = value * 2 + 'px';
+      sushi2.style.right = value * 1.9 + 'px';
       tobiko.style.bottom = value * 1.20 + 'px';
       circle.style.top = value * 1.2 + 'px';
       circle1.style.bottom = value * 1.10 + 'px';
