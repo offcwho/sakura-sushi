@@ -38,7 +38,7 @@
         z-index: 10;
         width: 50%;
         font-size: 24px;
-        color: $color-text;
+        color: #FFE7D7;
         margin-bottom: 40px;
         @include small-tablet{
             width: 65%;
@@ -55,14 +55,16 @@
         }
     }
     &__button{
+        padding: 15px 20px;
         position: relative;
         z-index: 10;
-        padding: 0;
-        font-size: 32px;
+        background: linear-gradient(100deg,#BC6683, #D16670);
+        font-size: 28x;
         text-transform: uppercase;
         display: flex;
         gap: 30px;
-        color:  $color-text;
+        color:  #fff;
+        border-radius: 35px;
         @include mb{
             font-size: 20px;
         }
@@ -70,7 +72,7 @@
             font-weight: 500;
         }
         &-icon{
-            width: 36px;
+            width: 28px;
             stroke-width: 1.5;
         }
     }
@@ -98,7 +100,6 @@
     height: 200vh;
 }
 #Gate{
-    object-fit: contain;
     @include mobile{
         display: none;
     }
