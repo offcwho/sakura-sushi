@@ -6,8 +6,7 @@ import { useEffect } from "react";
 export default function Background(){
 
     useEffect(() => {
-        window.addEventListener('scroll', function(){
-            const 
+        const 
                 background = document.getElementById('background'),
                 mountain = document.getElementById('Mountain'),
                 mountain2 = document.getElementById('Mountain2'),
@@ -34,8 +33,10 @@ export default function Background(){
                 cloud2 = document.getElementById('Cloud2'),
                 gate = document.getElementById('Gate'),
                 water = document.getElementById('water'),
-                sun = document.getElementById('Sun'),
-                value = window.scrollY;
+                sun = document.getElementById('Sun');
+
+        window.addEventListener('scroll', function() {
+                let value = window.scrollY;
 
                 //Mountains
                 mountain.style.top = value * 0.15 + 'px';

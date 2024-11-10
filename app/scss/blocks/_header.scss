@@ -1,7 +1,6 @@
 $color-bg-link: #000;
 $color: #fff;
 $transition: all .3s ease-in-out;
-$radius-default: 8px;
 
 .header{
     width: 100%;
@@ -34,7 +33,6 @@ $radius-default: 8px;
     }
     &__item{
         padding: 5px 10px;
-        border-radius: $radius-default;
         transition: $transition;
         &:hover{
             background-color: $color-text;
