@@ -23,7 +23,7 @@ export default function Header(){
         }) 
     })
     return(
-        <header className="header" id="header">
+        <header className="application__header header" id="header">
             <div className="container header__container">
                 <Link href="/" className="header__link-logo">
                     <Image

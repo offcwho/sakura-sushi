@@ -3,8 +3,17 @@
     height: 100vh;
     user-select: none;
     overflow-x: hidden;
+    @include mobile{
+        padding-top: 0;
+    }
     &__container{
         height: 100%;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__title{
         position: relative;
@@ -12,6 +21,17 @@
         z-index: 10;
         text-transform: uppercase;
         color: #fff;
+        @include mobile{
+            width: 100%;
+            font-size: 65px;
+            text-align: center;
+        }
+        @include small-mobile{
+            font-size: 50px;
+        }
+        @include mb{
+            font-size: 35px;
+        }
     }
     &__description{
         position: relative;
@@ -20,6 +40,19 @@
         font-size: 24px;
         color: $color-text;
         margin-bottom: 40px;
+        @include small-tablet{
+            width: 65%;
+        }
+        @include mobile{
+            width: 100%;
+            text-align: center;
+        }
+        @include small-mobile{
+            font-size: 20px;
+        }
+        @include mb{
+            font-size: 16px;
+        }
     }
     &__button{
         position: relative;
@@ -30,6 +63,9 @@
         display: flex;
         gap: 30px;
         color:  $color-text;
+        @include mb{
+            font-size: 20px;
+        }
         &-text{
             font-weight: 500;
         }
@@ -63,5 +99,7 @@
 }
 #Gate{
     object-fit: contain;
-    scale: 1.4;
+    @include mobile{
+        display: none;
+    }
 }

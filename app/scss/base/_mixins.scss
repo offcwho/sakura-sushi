@@ -11,23 +11,23 @@
   }
   
   @mixin small-tablet {
-    @media (max-width: (920px)) {
+    @media (max-width: (768px)) {
       @content;
     }
   }
   
   @mixin mobile {
-    @media (max-width: (690px)) {
+    @media (max-width: (700px)) {
       @content;
     }
   }
   @mixin small-mobile{
-    @media (max-width: (500px)){
+    @media (max-width: (550px)){
       @content;
     }
   }
   @mixin mb{
-    @media (max-width: (420px)){
+    @media (max-width: (400px)){
       @content;
     }
   }
