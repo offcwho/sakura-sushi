@@ -21,6 +21,11 @@
       @content;
     }
   }
+  @mixin reviews {
+    @media (max-width: (600px)){
+      @content;
+    }
+  }
   @mixin small-mobile{
     @media (max-width: (550px)){
       @content;
