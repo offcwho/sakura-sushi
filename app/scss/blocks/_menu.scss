@@ -7,13 +7,22 @@ $radius: 8px;
     background-color: $background-color;
     color: $color-desc;
     position: relative;
+    z-index: 9999;
+    &__color{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 200px;
+        width: 100%;
+        background-color: #af2323;
+    }
     &__title{
         margin-bottom: 30px;
     }
     &__list{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        gap: 100px 40px;
+        gap: 40px;
         margin-bottom: 40px;
         @include small-tablet{
             grid-template-columns: repeat(3,1fr);
@@ -32,17 +41,25 @@ $radius: 8px;
         transition: all 500ms ease-in-out;
     }
     &__item{
+        padding-top: 300px;
         position: relative;
         background-color: #2c2c2c;
-        padding: 1rem;
-        border-radius: $radius;
+        transition:  $transition-3s;
+        &:hover{
+            transform: translateY(-20px);
+            .menu__item-image{
+                height: 350px;
+            }
+        }
         &:hover .menu__image{
-            transform: translate(0rem, -4rem);
-            scale: 1.2;
-            filter: drop-shadow(0px 60px 10px #111);
         }
         &-image{
-            position: relative;
+            position: absolute;
+            object-fit: contain;
+            height:  300px;
+            width: 100%;
+            bottom:  calc(100% - 300px);
+            transition: $transition-3s;
         }
         &-title{
             font-size: 25px;
@@ -56,25 +73,31 @@ $radius: 8px;
             margin-bottom: 5px;
             font-weight: 200;
         }
+        &-actions{
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 20px;
+            padding-block: 10px;
+        }
+        &-oldcost{
+            text-decoration: line-through;
+            color: #af2323;
+        }
         &-cost{
             display: flex;
             font-size: 22px;
             width: 100%;
             text-align: center;
             justify-content: center;
-            margin-bottom: 30px;
+            font-weight: 500;
+            &s{
+                display: flex;
+                flex-direction: column;
+            }
         }
         &-button{
-            padding: 10px 15px;
-            position: absolute;
-            background-color: #af2323;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: $radius;
             transition: all .3s ease-in-out;
             &:hover{
-                background-color: #ccc;
-                color: #111;
             }
         }
     }

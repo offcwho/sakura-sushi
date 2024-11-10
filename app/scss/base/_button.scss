@@ -1,18 +1,18 @@
 .button{
     padding: 20px 40px;
-    border-radius: var(--rounded-lg);
+    border-radius: $rounded-lg;
     width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
     &--primary{
-        background-color: var(--color-primary);
-        transition: var(--transition-3s);
-        color: var(--color-link );
+        background-color: $color-primary;
+        transition: $transition-3s;
+        color: $color-link ;
         &-s{
-            background-color: var(--color-primary-secondary);
-            color: var(--color-link);
-            transition: var(--transition-3s);
+            background-color: $color-primary-secondary;
+            color: $color-link;
+            transition: $transition-3s;
             &:hover{
                 opacity: 0.7;
             }
@@ -30,9 +30,9 @@
         position: fixed;
         bottom: 10px;
         right: 10px;
-        background-color: var(--color-primary-secondary);
+        background-color: $color-primary-secondary;
         border-radius: 50%;
-        color: var(--color-link);
+        color: $color-link;
     }
 }
 .show{

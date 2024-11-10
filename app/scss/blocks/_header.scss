@@ -1,5 +1,4 @@
 $color-bg-link: #000;
-$color-text: #ca1717;
 $color: #fff;
 $transition: all .3s ease-in-out;
 $radius-default: 8px;
@@ -39,7 +38,6 @@ $radius-default: 8px;
         transition: $transition;
         &:hover{
             background-color: $color-text;
-            color: $color-bg-link;
         }
     }
     &__list{
@@ -57,7 +55,6 @@ $radius-default: 8px;
             transition: $transition;
             &:hover{
                 background: $color-text;
-                color: $color-bg-link;
             }
         }
     }

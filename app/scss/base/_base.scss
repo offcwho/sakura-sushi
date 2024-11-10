@@ -1,6 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	background-color: var(--color-background);
+	background-color: $color-background;
 	overflow-x: hidden;
 	width: 100vw;
 }
@@ -23,7 +23,7 @@ img {
 
 
 a {
-	color: var(--link-color);
+	color: $color-link;
 	font-size: 18px;
 }
 

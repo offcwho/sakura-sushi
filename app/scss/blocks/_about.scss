@@ -2,8 +2,11 @@ $background-color: #090909;
 $color-desc: #ccc;
 
 .about{
-    padding: 100px 0;
     background-color: $background-color;
+    &__title{
+        color: $color-desc;
+        margin-bottom: 40px;
+    }
     &__image{
         width: 500px;
     }

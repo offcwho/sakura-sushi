@@ -4,6 +4,7 @@ export default function About(){
     return(
         <section className="main__section about">
             <div className="container container__about">
+                <h2 className="about__title">О ресторане</h2>
                 <ul className="about__list">
                     <li className="about__item">
                         <div className="about__item-left">
