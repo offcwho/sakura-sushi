@@ -1,6 +1,6 @@
 .reviews{
     padding: 100px 0;
-    background-color: #111;
+    background-color: $color-primary;
     position: relative;
     &__container{
         &-slide{
@@ -47,11 +47,10 @@
     &__button{
         padding: 15px 20px;
         border-radius: 12px;
-        background-color: #af2323;
+        background-color: $color-primary;
         transition: all .3s ease-in-out;
         &:hover{
-            transform: translate(-2px, -2px);
-            filter: drop-shadow(2px 4px 6px #af2323);
+            filter: grayscale(1);
         }
     }
     &__slide{

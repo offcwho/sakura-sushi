@@ -38,16 +38,16 @@ export default function Header(){
                 <nav className="header__nav">
                     <menu className="header__menu">
                         <li className="header__item">
-                            <Link className="header__link" href="/menu">Меню</Link>
+                            <Link className="header__link" href="#menu">Меню</Link>
+                        </li>
+                        <li className="header__item">
+                            <Link className="header__link" href="#about">О ресторане</Link>
                         </li>
                         <li className="header__item">
                             <Link className="header__link" href="/menu">Меню</Link>
                         </li>
                         <li className="header__item">
-                            <Link className="header__link" href="/menu">Меню</Link>
-                        </li>
-                        <li className="header__item">
-                            <Link className="header__link" href="/menu">Меню</Link>
+                            <Link className="header__link" href="#reviews">Отзывы</Link>
                         </li>
                         <li className="header__item">
                             <Link className="header__link" href="/menu">Меню</Link>

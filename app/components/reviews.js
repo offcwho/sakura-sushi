@@ -12,7 +12,7 @@ import { Parallax, Pagination, Navigation } from 'swiper/modules';
 
 export default function Reviews(){
     return(
-        <section className="main__section reviews">
+        <section className="main__section reviews" id="reviews">
             <div className="container reviews__container">
                 <h2 className="reviews__title">Отзывы</h2>
                 <Swiper

@@ -14,7 +14,7 @@ $radius: 8px;
         left: 0;
         height: 200px;
         width: 100%;
-        background-color: #af2323;
+        background-color: $color-primary;
     }
     &__title{
         margin-bottom: 30px;
@@ -81,7 +81,7 @@ $radius: 8px;
         }
         &-oldcost{
             text-decoration: line-through;
-            color: #af2323;
+            color: $color-primary;
         }
         &-cost{
             display: flex;
@@ -107,12 +107,11 @@ $radius: 8px;
         width: 100%;
         &-btn{
             padding: 15px 20px;
-            background-color: #af2323;
+            background-color: $color-primary;
             border-radius: $radius;
             transition: all .3s ease-in-out;
             &:hover{
-                background-color: #ccc;
-                color: #111;
+                filter: grayscale(1);
             }
         }
     }
