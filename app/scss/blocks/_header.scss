@@ -11,6 +11,7 @@ $transition: all .3s ease-in-out;
     color: $color;
     &--scrolled{
         backdrop-filter: blur(10px);
+        background-color: rgb(0 0 0 / 90%);
     }
     &__container{
         padding-block: 10px;
