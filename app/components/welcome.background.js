@@ -2,75 +2,24 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
+import $ from "jquery";
 
 export default function Background(){
 
     useEffect(() => {
-        const 
-                background = document.getElementById('background'),
-                mountain = document.getElementById('Mountain'),
-                mountain2 = document.getElementById('Mountain2'),
-                mountain3 = document.getElementById('Mountain3'),
-                mountain4 = document.getElementById('Mountain4'),
-                mountain5 = document.getElementById('Mountain5'),
-                mountain6 = document.getElementById('Mountain6'),
-                mountain7 = document.getElementById('Mountain7'),
-                mountain8 = document.getElementById('Mountain8'),
-                mountain9 = document.getElementById('Mountain9'),
-                mountain10 = document.getElementById('Mountain10'),
-                reflection = document.getElementById('reflection'),
-                mountain_reflection = document.getElementById('Mountain_reflection'),
-                mountain2_reflection = document.getElementById('Mountain2_reflection'),
-                mountain3_reflection = document.getElementById('Mountain3_reflection'),
-                mountain4_reflection = document.getElementById('Mountain4_reflection'),
-                mountain5_reflection = document.getElementById('Mountain5_reflection'),
-                mountain6_reflection = document.getElementById('Mountain6_reflection'),
-                mountain7_reflection = document.getElementById('Mountain7_reflection'),
-                mountain8_reflection = document.getElementById('Mountain8_reflection'),
-                mountain9_reflection = document.getElementById('Mountain9_reflection'),
-                mountain10_reflection = document.getElementById('Mountain10_reflection'),
-                cloud = document.getElementById('Cloud'),
-                cloud2 = document.getElementById('Cloud2'),
-                gate = document.getElementById('Gate'),
-                water = document.getElementById('water'),
-                sun = document.getElementById('Sun');
 
-        window.addEventListener('scroll', function() {
-                let value = window.scrollY;
+        window.addEventListener("scroll", function(event){
 
-                //Mountains
-                mountain.style.top = value * 0.15 + 'px';
-                mountain2.style.top = value * 0.20 + 'px';
-                mountain3.style.top = value * 0.25 + 'px';
-                mountain4.style.top = value * 0.30 + 'px';
-                mountain5.style.top = value * 0.35 + 'px';
-                mountain6.style.top = value * 0.40 + 'px';
-                mountain7.style.top = value * 0.45 + 'px';
-                mountain8.style.top = value * 0.50 + 'px';
-                mountain9.style.top = value * 0.55 + 'px';
-                mountain10.style.top = value * 0.60 + 'px';
-
-                //Reflections
-                mountain_reflection.style.top = value * 0.60 + 'px';
-                mountain2_reflection.style.top = value * 0.55 + 'px';
-                mountain3_reflection.style.top = value * 0.50 + 'px';
-                mountain4_reflection.style.top = value * 0.45 + 'px';
-                mountain5_reflection.style.top = value * 0.40 + 'px';
-                mountain6_reflection.style.top = value * 0.35 + 'px';
-                mountain7_reflection.style.top = value * 0.30 + 'px';
-                mountain8_reflection.style.top = value * 0.25 + 'px';
-                mountain9_reflection.style.top = value * 0.20 + 'px';
-                mountain10_reflection.style.top = value * 0.15 + 'px';
-                reflection.style.top = value * 0.65 + 'px';
-
-                //Other
-                gate.style.top = value * 0.5 + 'px'
-                water.style.top = value * 0.4 + 'px'
-                cloud.style.top = value * 0.3 + 'px'
-                cloud2.style.top = value * 0.4 + 'px'
-                sun.style.left = value * 0.4 + 'px'
-                background.style.top = value * 0.15 + 'px'
-        })
+            var top = this.pageYOffset;
+        
+            var layers = $(".welcome__image-background");
+            var speed, yPos;
+            layers.each(function() {
+              speed = $(this).attr('data-speed');
+              var yPos = (top * speed / 100);
+              $(this).attr('style','transform: translate(0px, ' + yPos + 'px)');
+            });
+          });
       })
 
     return(
@@ -82,6 +31,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="background"
+                data-speed="30"
             />
             <Image
                 className="welcome__image-background z-index-1"
@@ -90,6 +40,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Cloud"
+                data-speed="10"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -98,6 +49,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Cloud2"
+                data-speed="10"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -106,6 +58,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain"
+                data-speed="30"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -114,6 +67,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain2"
+                data-speed="35"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -122,6 +76,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain3"
+                data-speed="40"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -130,6 +85,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain4"
+                data-speed="45"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -138,6 +94,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain5"
+                data-speed="50"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -146,6 +103,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain6"
+                data-speed="55"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -154,6 +112,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain7"
+                data-speed="60"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -162,6 +121,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain8"
+                data-speed="65"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -170,6 +130,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain9"
+                data-speed="70"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -178,6 +139,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain10"
+                data-speed="75"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -186,6 +148,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="water"
+                data-speed="75"
             />
              <Image
                 className="welcome__image-background z-index-2"
@@ -194,6 +157,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain_reflection"
+                data-speed="75"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -202,6 +166,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain2_reflection"
+                data-speed="70"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -210,6 +175,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain3_reflection"
+                data-speed="65"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -218,6 +184,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain4_reflection"
+                data-speed="60"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -226,6 +193,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain5_reflection"
+                data-speed="55"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -234,6 +202,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain6_reflection"
+                data-speed="50"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -242,6 +211,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain7_reflection"
+                data-speed="45"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -250,6 +220,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain8_reflection"
+                data-speed="40"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -258,6 +229,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain9_reflection"
+                data-speed="35"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -266,6 +238,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Mountain10_reflection"
+                data-speed="30"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -274,6 +247,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="reflection"
+                data-speed="80"
             />
             <Image
                 className="welcome__image-background z-index-2"
@@ -290,6 +264,7 @@ export default function Background(){
                 width={10}
                 height={10}
                 id="Gate"
+                data-speed="75"
             />
         </div>
         )
