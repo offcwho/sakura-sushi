@@ -37,7 +37,6 @@ export default function Reservation(){
                     </div>
                     <div className="reservation__container-input">
                         <DatePicker
-                            
                             label="Event Date"
                             variant="bordered"
                             hideTimeZone
