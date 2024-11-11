@@ -5,6 +5,7 @@ import IMask from 'imask';
 import { useEffect, useState } from "react"
 
 import 'intl-tel-input/build/css/intlTelInput.css';
+import {DatePicker} from "@nextui-org/date-picker";
 
 export default function Reservation(){
 
@@ -19,10 +20,11 @@ export default function Reservation(){
             {
               mask: '+{7}(000)000-00-00'
             }
-          )
+        )
+
     })
     return(
-        <section className="main__section reservation">
+        <section className="main__section reservation dark">
             <div className="container reservation__container">
                 <h2 className="reservation__title">Бронирование</h2>
                 <div className="reservation__form">
@@ -33,7 +35,7 @@ export default function Reservation(){
                         <input type="tel" className="reservation__input" id="phone" placeholder="(999) 999 99 99" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                     </div>
                     <div className="reservation__container-input">
-                        <input type="datetime-local" className="reservation__input" placeholder="Дата"/>
+                            <DatePicker as="div" label="Birth date" className="max-w-[284px]" />
                     </div>
                     <textarea name="abc" id="textarea" className="reservation__textarea" placeholder="Примечание"></textarea>
                     <button className="button reservation__button">Забронировать</button>
