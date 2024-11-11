@@ -55,35 +55,35 @@ export default function Reviews(){
                                     onOpenChange={onOpenChange}
                                     placement="center"
                                 >
-        <ModalContent className='modal-background'>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1 modal-color">Отзыв</ModalHeader>
-              <ModalBody>
-                <Input
-                  autoFocus
-                  label="Имя"
-                  placeholder="Введите ваше имя"
-                  variant="bordered"
-                  className='modal-color'
-                />
-                <Input
-                  label="Отзыв"
-                  placeholder="Оставить отзыв"
-                  type="text"
-                  variant="bordered"
-                  className='modal-color'
-                />
-              </ModalBody>
-              <ModalFooter>
-                <Button color="primary" className='button-background' onPress={onClose}>
-                  Отправить
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
+                                    <ModalContent className='modal-background'>
+                                      {(onClose) => (
+                                        <>
+                                          <ModalHeader className="flex flex-col gap-1 modal-color">Отзыв</ModalHeader>
+                                          <ModalBody>
+                                            <Input
+                                              autoFocus
+                                              label="Имя"
+                                              placeholder="Введите ваше имя"
+                                              variant="bordered"
+                                              className='modal-color'
+                                            />
+                                            <Input
+                                              label="Отзыв"
+                                              placeholder="Оставить отзыв"
+                                              type="text"
+                                              variant="bordered"
+                                              className='modal-color'
+                                            />
+                                          </ModalBody>
+                                          <ModalFooter>
+                                            <Button color="primary" className='button-background' onPress={onClose}>
+                                              Отправить
+                                            </Button>
+                                          </ModalFooter>
+                                        </>
+                                      )}
+                                    </ModalContent>
+                                </Modal>
                             </div>
                     </SwiperSlide>
                     <SwiperSlide className='reviews__slide'>

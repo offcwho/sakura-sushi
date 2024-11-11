@@ -74,3 +74,6 @@
 .button-background{
     background-color: $color-primary!important;
 }
+.group [data-focus="true"] .group-data-\[focus\=true\]\:border-default-foreground{
+    border-color: #ccc!important;
+}

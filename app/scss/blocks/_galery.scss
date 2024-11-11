@@ -1,0 +1,22 @@
+.galery{
+    padding: 100px 0;
+    &__title{
+        color: #ccc;
+        margin-bottom: 30px;
+    }
+    &__list{
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    &__item{
+        page-break-inside: avoid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
