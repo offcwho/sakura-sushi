@@ -33,7 +33,7 @@ export default function Reservation(){
                         <input type="tel" className="reservation__input" id="phone" placeholder="(999) 999 99 99" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                     </div>
                     <div className="reservation__container-input">
-                        <input type="date" className="reservation__input" placeholder="Дата"/>
+                        <input type="datetime-local" className="reservation__input" placeholder="Дата"/>
                     </div>
                     <textarea name="abc" id="textarea" className="reservation__textarea" placeholder="Примечание"></textarea>
                     <button className="button reservation__button">Забронировать</button>
