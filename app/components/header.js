@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from 'react';
+import {Button} from "@nextui-org/react";
 
 //Icons
-import { ShoppingCart } from 'lucide-react';
-import { UserRound } from 'lucide-react';
+import { MenuIcon, ShoppingCart, UserRound, X } from 'lucide-react';
 //Icons
 
 export default function Header(){
@@ -21,36 +21,47 @@ export default function Header(){
                 header.classList.remove('header--scrolled');
             }
         }) 
+        const
+            button = document.getElementById("open"),
+            menu = document.getElementById("menu"),
+            buttonMenu = document.getElementById("MenuIcon"),
+            close = document.getElementById("Close");
+        
+        button.addEventListener("click", function(){
+            menu.classList.toggle("header__nav--open")
+            buttonMenu.classList.toggle("no-active")
+            close.classList.toggle("active")
+        })
     })
     return(
-        <header className="application__header header" id="header">
+        <header className="header" id="header">
             <div className="container header__container">
                 <Link href="/" className="header__link-logo">
                     <Image
                         className=""
-                        src="/next.svg"
+                        src="/logo.svg"
                         alt="Next.js logo"
-                        width={180}
+                        width={50}
                         height={38}
                         priority
                     />
                 </Link>
-                <nav className="header__nav">
+                <nav className="header__nav" id="menu">
                     <menu className="header__menu">
                         <li className="header__item">
                             <Link className="header__link" href="#menu">Меню</Link>
                         </li>
                         <li className="header__item">
-                            <Link className="header__link" href="#about">О ресторане</Link>
+                            <Link className="header__link" href="#reservation">Бронирование</Link>
                         </li>
                         <li className="header__item">
-                            <Link className="header__link" href="/menu">Меню</Link>
+                            <Link className="header__link" href="#about">О ресторане</Link>
                         </li>
                         <li className="header__item">
                             <Link className="header__link" href="#reviews">Отзывы</Link>
                         </li>
                         <li className="header__item">
-                            <Link className="header__link" href="/menu">Меню</Link>
+                            <Link className="header__link" href="#galery">Галерея</Link>
                         </li>
                     </menu>
                     <ul className="header__list">
@@ -66,6 +77,10 @@ export default function Header(){
                         </li>
                     </ul>
                 </nav>
+                <Button color="primary" className='button header__button button-background' id="open"> 
+                    <MenuIcon id="MenuIcon"/>
+                    <X id="Close"/>
+                </Button>
             </div>
         </header>
     );

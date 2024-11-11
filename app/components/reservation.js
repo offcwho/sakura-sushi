@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 
 import 'intl-tel-input/build/css/intlTelInput.css';
 import {DatePicker} from "@nextui-org/date-picker";
+import {Button} from "@nextui-org/react";
 import {now, getLocalTimeZone} from "@internationalized/date";
 
 export default function Reservation(){
@@ -25,7 +26,7 @@ export default function Reservation(){
 
     })
     return(
-        <section className="main__section reservation dark">
+        <section className="main__section reservation dark" id="reservation">
             <div className="container reservation__container">
                 <h2 className="reservation__title">Бронирование</h2>
                 <div className="reservation__form">
@@ -45,7 +46,7 @@ export default function Reservation(){
                         />
                     </div>
                     <textarea name="abc" id="textarea" className="reservation__textarea" placeholder="Примечание"></textarea>
-                    <button className="button reservation__button">Забронировать</button>
+                    <Button color="primary" className='button reservation__button button-background'> Забронировать</Button>
                 </div>
             </div>
         </section>

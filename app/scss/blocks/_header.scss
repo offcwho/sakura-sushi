@@ -21,22 +21,58 @@ $transition: all .3s ease-in-out;
         align-items: center;
         gap: 30px;
     }
+    &__link{
+        &-logo{
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__button{
+        padding: 0!important;
+        min-width: 60px !important;
+        height: 60px !important;
+        display: none!important;
+        border-radius: 50%!important;
+        @include tablet{
+            display: flex!important;
+        }
+    }
     &__nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        &--open{
+            right: 0!important;
+        }
+        @include tablet{
+            height: 100vh!important;
+            overflow: hidden;
+            position: absolute;
+            right: -100%;
+            top: 0;
+            padding: 50px 0;
+            flex-direction: column;
+            background-color: #111;
+            transition: $transition-3s;
+            justify-content: center;
+            gap: 30px;
+        }
     }
     &__menu{
         display: flex;
         align-items: center;
         gap: 20px;
+        @include tablet{
+            flex-direction: column;
+        }
     }
     &__item{
         padding: 5px 10px;
         transition: $transition;
         &:hover{
-            background-color: $color-text;
+            background-color: $color-primary;
         }
     }
     &__list{
@@ -53,8 +89,20 @@ $transition: all .3s ease-in-out;
             height: 60px;
             transition: $transition;
             &:hover{
-                background: $color-text;
+                background: $color-primary;
             }
         }
     }
+}
+#Close{
+    display: none;
+}
+.active{
+    display: block!important;
+}
+.no-active{
+    display: none!important;
+}
+#MenuIcon{
+
 }

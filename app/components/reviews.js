@@ -61,7 +61,6 @@ export default function Reviews(){
                                           <ModalHeader className="flex flex-col gap-1 modal-color">Отзыв</ModalHeader>
                                           <ModalBody>
                                             <Input
-                                              autoFocus
                                               label="Имя"
                                               placeholder="Введите ваше имя"
                                               variant="bordered"

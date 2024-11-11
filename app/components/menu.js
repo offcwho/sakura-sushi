@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ShoppingCart } from 'lucide-react';
+import {Button} from "@nextui-org/react";
 
 export default function Menu(){
     return(
@@ -172,7 +173,7 @@ export default function Menu(){
                     </li>
                 </ul>
                 <div className="menu__more">
-                    <Link href="#!" className="menu__more-btn">Показать ещё...</Link>
+                <Button color="primary" className='button-background'> Показать еще</Button>
                 </div>
             </div>
         </section>
