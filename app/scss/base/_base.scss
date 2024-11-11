@@ -3,7 +3,7 @@ html {
 	background-color: $color-background;
 	overflow-x: hidden;
 	width: 100vw;
-	background-color: #111;
+	background-color: #000;
 }
 html, body {
 	@include small-tablet{
@@ -61,4 +61,7 @@ h2{
 }
 p{
 	font-size: 36px;
+}
+input[type='date'] {
+	-webkit-appearance: none;
 }
