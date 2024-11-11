@@ -10,7 +10,12 @@ import 'swiper/css/pagination';
 
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
 
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
+
 export default function Reviews(){
+
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
     return(
         <section className="main__section reviews" id="reviews">
             <div className="container reviews__container">
@@ -40,13 +45,45 @@ export default function Reviews(){
                         }}
                         data-swiper-parallax="-23%"
                     ></div>
-                    <SwiperSlide className='reviews__slide reviews__post'>
+                    <SwiperSlide className='reviews__slide reviews__post dark'>
                             <div className="reviews__container-slide">
                                 <h3 className="reviews__post-title" data-swiper-parallax="-100">Оставьте отзыв</h3>
                                 <p className="reviews__post-desc" data-swiper-parallax="-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat ullam nulla nobis corporis, culpa tenetur ipsum exercitationem obcaecati quisquam!</p>
-                                <button className="reviews__button" data-swiper-parallax="-150">
-                                    <span className="reviews__button-text">Оставить отзыв</span>
-                                </button>
+                                <Button onPress={onOpen} className='button-background'>Оставить отзыв</Button>
+                                <Modal 
+                                    isOpen={isOpen} 
+                                    onOpenChange={onOpenChange}
+                                    placement="center"
+                                >
+        <ModalContent className='modal-background'>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1 modal-color">Отзыв</ModalHeader>
+              <ModalBody>
+                <Input
+                  autoFocus
+                  label="Имя"
+                  placeholder="Введите ваше имя"
+                  variant="bordered"
+                  className='modal-color'
+                />
+                <Input
+                  label="Отзыв"
+                  placeholder="Оставить отзыв"
+                  type="text"
+                  variant="bordered"
+                  className='modal-color'
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" className='button-background' onPress={onClose}>
+                  Отправить
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
                             </div>
                     </SwiperSlide>
                     <SwiperSlide className='reviews__slide'>
