@@ -3,6 +3,7 @@ html {
 	background-color: $color-background;
 	overflow-x: hidden;
 	width: 100vw;
+	background-color: #111;
 }
 html, body {
 	@include small-tablet{
@@ -54,6 +55,9 @@ h2{
 	font-size: 48px;
 	font-weight: 600;
 	text-align: center;
+	@include mb{
+		font-size: 28px;
+	}
 }
 p{
 	font-size: 36px;

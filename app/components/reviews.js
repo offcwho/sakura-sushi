@@ -28,6 +28,7 @@ export default function Reviews(){
                     }}
                     navigation={true}
                     modules={[Parallax, Pagination, Navigation]}
+                    mousewheel={{ invert: true}}
                     className="mySwiper"
                 >
                     <div

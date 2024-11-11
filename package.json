@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "imask": "^7.6.1",
+    "intl-tel-input": "^24.7.0",
     "jquery": "^3.7.1",
     "lucide-react": "^0.454.0",
     "next": "15.0.3",
