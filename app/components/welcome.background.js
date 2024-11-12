@@ -16,7 +16,9 @@ export default function Background(){
             layers.each(function() {
               speed = $(this).attr('data-speed');
               var yPos = -(top * speed / 100);
-              $(this).attr('style','transform: translate(0px, ' + yPos + 'px)');
+              if(yPos < 1080){
+                    $(this).attr('style','transform: translate(0px, ' + yPos + 'px)');
+              }
             });
           });
       })
