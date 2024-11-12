@@ -13,7 +13,7 @@ export default function Welcome() {
         <div className="container welcome__container">
           <h1 className="welcome__title">Sakura Sushi</h1>
           <p className="welcome__description">Место, где можно погрузиться в мир вкусов и ароматов Японии, ощутить гармонию и покой, насладиться блюдами, созданными с душой и профессионализмом.</p>
-          <Button color="primary" className='button reservation__button button-background welcome__button'> Забронировать</Button>
+          <Button color="primary" className='button reservation__button button-background welcome__button'> Перейти к меню</Button>
         </div>
         <Background/>
       </section>
