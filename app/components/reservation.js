@@ -32,14 +32,13 @@ export default function Reservation(){
                             type="text"
                             label="Имя"
                             variant="bordered"
-                            defaultValue="junior@nextui.org"
                             className="reservation__input"
                         />
                     </div>
                     <div className="reservation__container-input">
                         <Input
                             isRequired
-                            type="text"
+                            type="tel"
                             label="Телефон"
                             variant="bordered"
                             className="reservation__input"
