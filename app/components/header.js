@@ -32,6 +32,16 @@ export default function Header(){
             buttonMenu.classList.toggle("no-active")
             close.classList.toggle("active")
         })
+        
+        const link = document.querySelectorAll(".header__item");
+
+        link.forEach(link_array => {
+            link_array.addEventListener("click", function(){
+                menu.classList.toggle("header__nav--open")
+                buttonMenu.classList.toggle("no-active")
+                close.classList.toggle("active")
+            })
+        })
     })
     return(
         <header className="header" id="header">
