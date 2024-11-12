@@ -21,25 +21,17 @@
         }
     }
     &__input{
-        padding: 15px 20px;
-        background-color: #2c2c2c;
         border-radius: $rounded-md;
         color: #ccc;
-        width: 100%;
+        width: 100%!important;
     }
     &__textarea{
-        padding: 15px 20px;
         resize: none;
         width: 100%!important;
         color: #ccc;
-        border-radius: $rounded-md;
-        background-color: #2c2c2c;
-        &:focus-visible{
-            outline: none;
-        }
-        &::-webkit-scrollbar{
-            width: 5px;
-            background-color: #2c2c2c;
+        ::-webkit-scrollbar{
+            width: 2px!important;
+            background-color: transparent!important;
         }
         &::-webkit-scrollbar-thumb{
             background-color: $color-primary;

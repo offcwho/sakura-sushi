@@ -55,16 +55,9 @@
         }
     }
     &__button{
-        padding: 15px 20px;
-        position: relative;
-        z-index: 10;
-        background: linear-gradient(100deg,#BC6683, #D16670);
-        font-size: 28x;
-        text-transform: uppercase;
-        display: flex;
-        gap: 30px;
-        color:  #fff;
-        border-radius: 35px;
+        z-index: 1!important;
+        width: fit-content!important;
+        padding: 25px 40px!important;
         @include mb{
             font-size: 20px;
         }
