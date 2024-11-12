@@ -8,7 +8,7 @@ export default function Galery(){
     })
     
     return(
-        <section className="main__section galery">
+        <section className="main__section galery" id="galery">
             <div className="container galery__container">
                 <h2 className="galery__title">Галерея</h2>
                 <ul className="galery__list">

@@ -18,6 +18,7 @@
     "intl-tel-input": "^24.7.0",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.7.1",
+    "jquery.maskedinput": "^1.4.1",
     "js-datepicker": "^5.18.3",
     "lucide-react": "^0.454.0",
     "masonry-layout": "^4.2.2",

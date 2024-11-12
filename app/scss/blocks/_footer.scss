@@ -1,3 +1,66 @@
 .footer{
     background-color: $color-primary;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        background-color: #111;
+        padding: 50px;
+        border-radius: 12px;
+        @include tablet{
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+    &__nav{
+        
+    }
+    &__block{
+        display: flex;
+        gap: 100px;
+        margin-bottom: 80px;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+    &__link{
+        &-logo{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    }
+    &__title{
+        font-size: 36px;
+        color: #fff;
+
+    }
+    &__item{
+        color: #ccc;
+        margin-bottom: 10px;
+        &-title{
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+    }
+    &__input{
+        color: #ccc!important;
+        margin-bottom: 15px;
+    }
+    &__textarea{
+        color: #ccc!important;
+    }
+    &__button{
+        margin-top: 10px;
+    }
+}
+iframe{
+    border-radius: 12px;
+    height: auto;
+    @include tablet{
+        width: auto;
+        height: 400px;
+    }
 }
