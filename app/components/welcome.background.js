@@ -76,7 +76,7 @@ export default function Background(){
                 id="Gate"
                 data-speed="50"
             />
-            <div id="water3" className="welcome__image-background" data-speed="30"></div>
+            <div id="water3" className="welcome__image-background" data-speed="31"></div>
         </div>
         )
 }
